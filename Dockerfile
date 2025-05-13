@@ -7,8 +7,7 @@ ARG gh_username=jmeier4
 ARG service_home="/home/EasyOCR"
 
 # Configure apt and install packages
-RUN apt-get update -y && \
-    apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0 \
     libsm6 \
     libxext6 \
